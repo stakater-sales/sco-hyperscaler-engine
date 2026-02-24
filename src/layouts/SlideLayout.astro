@@ -1,0 +1,64 @@
+---
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    section {
+      height: 100vh;
+      padding: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      scroll-snap-align: start;
+      transition: all 0.6s ease;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    p, li {
+      font-size: 1.4rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-top: 1.5rem;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .highlight {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <slot />
+</body>
+</html>
