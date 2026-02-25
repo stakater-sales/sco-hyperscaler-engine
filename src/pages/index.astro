@@ -1,119 +1,378 @@
 ---
-import SlideLayout from "../layouts/SlideLayout.astro";
+const title = "Stakater | SCO – Hyperscaler Engine";
 ---
 
-<SlideLayout title="SCO - Hyperscaler Engine">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
 
-  <section style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:white;">
-    <h1>The Next Wave After “Just Kubernetes”</h1>
-    <h2>OpenShift adoption is growing — but customers struggle to turn clusters into platforms.</h2>
-    <ul>
-      <li>VMware exit accelerating</li>
-      <li>Sovereign cloud demand rising</li>
-      <li>MSPs want to sell XaaS — but lack orchestration layer</li>
-    </ul>
-    <div class="highlight">
-      There is a missing layer above OpenShift.
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #E00000;
+  --dark: #0A0F1C;
+  --gray: #6B7280;
+  --light: #F5F7FA;
+  --gradient: linear-gradient(135deg, #E00000 0%, #7A0000 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: var(--dark);
+}
+
+.slide-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+section {  
+  height: 100vh;
+  padding: 100px 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h1 { font-size: 60px; font-weight: 900; line-height: 1.1; }
+h2 { font-size: 42px; font-weight: 700; margin-bottom: 20px; }
+p  { font-size: 20px; color: var(--gray); max-width: 900px; }
+
+.highlight { color: var(--primary); font-weight: 800; }
+.section-light { background: var(--light); }
+
+.logo {
+  position: fixed;
+  top: 30px;
+  left: 50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.cta {
+  background: var(--gradient);
+  color: white;
+}
+
+.cta p { color: #ffe5e5; }
+
+</style>
+</head>
+
+<body>
+
+<div class="logo">STAKATER</div>
+
+<div class="slide-container">
+<div class="slides" id="slides">
+
+<!-- Slide 1 -->
+<section>
+  <div class="container" style="text-align:center;">
+    <h1>
+      OpenShift Is the Cloud OS.
+      <br/>
+      <span class="highlight">But It Is Not a Cloud Business.</span>
+    </h1>
+    <br/><br/>
+    <h2 style="color:#6B7280; font-weight:500;">
+      The Missing Layer Above OpenShift.
+    </h2>
+  </div>
+</section>
+
+<!-- Slide 2 -->
+<section>
+  <div class="container">
+    <h1>
+      VMware Exit.
+      <br/>
+      Sovereign Cloud.
+      <br/>
+      XaaS Explosion.
+    </h1>
+
+    <br/><br/>
+
+    <p>
+      MSPs, Telcos, and National CSPs want to sell cloud services.
+      <br/><br/>
+      OpenShift gives them the runtime.
+      <br/>
+      It does not give them the operating model.
+    </p>
+
+    <br/><br/>
+
+    <h2 class="highlight">
+      That gap is strategic.
+    </h2>
+  </div>
+</section>
+
+<!-- Slide 3 -->
+<section class="section-light">
+  <div class="container">
+
+    <h1 style="text-align:center;">
+      Introducing SCO
+    </h1>
+
+    <br/>
+
+    <h2 style="text-align:center;">
+      The Hyperscaler Engine for Service Providers
+    </h2>
+
+    <br/><br/><br/>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px;">
+
+      <div>
+        <h3 style="color:#6B7280; margin-bottom:20px;">OpenShift Provides</h3>
+        <p>
+          Kubernetes runtime<br/>
+          Virtualization<br/>
+          Storage<br/>
+          AI enablement<br/>
+          Container platform
+        </p>
+      </div>
+
+      <div style="border-left:4px solid #E00000; padding-left:30px;">
+        <h3 style="margin-bottom:20px;">SCO Provides</h3>
+        <p>
+          Multi-tenant orchestration<br/>
+          Governance enforcement<br/>
+          API-first automation<br/>
+          FinOps foundation<br/>
+          White-label cloud control plane
+        </p>
+      </div>
+
     </div>
-  </section>
 
-  <section style="background: linear-gradient(135deg,#141e30,#243b55); color:white;">
-    <h1>SCO = The Hyperscaler Engine</h1>
-    <h2>Not a CMP. A business engine.</h2>
-    <ul>
-      <li>API-first</li>
-      <li>Multi-tenant by design</li>
-      <li>Automation-native</li>
-      <li>OpenShift-native</li>
-    </ul>
-    <div class="highlight">
-      OpenShift is the Cloud OS. <br/>
-      SCO is the Hyperscaler Engine.
+  </div>
+</section>
+
+<!-- Slide 4 -->
+<section>
+  <div class="container">
+
+    <h1>
+      Installed OpenShift
+      <br/>
+      <span class="highlight">≠ Cloud Platform</span>
+    </h1>
+
+    <br/><br/>
+
+    <p>
+      Without orchestration above the cluster:
+      <br/><br/>
+      – Every tenant is manual<br/>
+      – Governance is fragmented<br/>
+      – Billing is external<br/>
+      – Self-service is improvised<br/>
+      – Expansion is slow
+    </p>
+
+    <br/><br/>
+
+    <h2>
+      Clusters don’t scale businesses.
+    </h2>
+
+  </div>
+</section>
+
+<!-- Slide 5 -->
+<section class="section-light">
+  <div class="container">
+
+    <h1>
+      SCO Makes OpenShift
+      <br/>
+      <span class="highlight">Sellable as a Cloud</span>
+    </h1>
+
+    <br/><br/>
+
+    <h2>What SCO Enables:</h2>
+
+    <br/>
+
+    <p>
+      ✔ Tenant onboarding in minutes<br/>
+      ✔ Policy guardrails by design<br/>
+      ✔ API & Terraform integration<br/>
+      ✔ Platform-wide governance<br/>
+      ✔ Service catalog extensions (DBaaS, AIaaS, VPNaaS)<br/>
+      ✔ Financial visibility across tenants
+    </p>
+
+  </div>
+</section>
+
+<!-- Slide 6 -->
+<section>
+  <div class="container">
+
+    <h1 style="text-align:center;">
+      Why This Matters to Red Hat
+    </h1>
+
+    <br/><br/>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:60px; text-align:center;">
+
+      <div>
+        <h2 style="color:#E00000;">VMware Exit</h2>
+        <p>OpenShift Virt + SCO = full operating model.</p>
+      </div>
+
+      <div>
+        <h2 style="color:#E00000;">Sovereign Initiatives</h2>
+        <p>National clouds need orchestration above clusters.</p>
+      </div>
+
+      <div>
+        <h2 style="color:#E00000;">MSP Expansion</h2>
+        <p>Standardized multi-tenant OpenShift at scale.</p>
+      </div>
+
     </div>
-  </section>
 
-  <section style="background: linear-gradient(135deg,#1f1c2c,#928dab); color:white;">
-    <h1>From Cluster → Revenue Platform</h1>
-    <ul>
-      <li>Tenant isolation</li>
-      <li>Billing & FinOps visibility</li>
-      <li>White-label portal</li>
-      <li>Terraform-ready APIs</li>
-      <li>Governance guardrails</li>
-    </ul>
-    <div class="highlight">
-      These are business capabilities — not OpenShift features.
-    </div>
-  </section>
+    <br/><br/><br/>
 
-  <section style="background: linear-gradient(135deg,#000000,#434343); color:white;">
-    <h1>Why This Matters to Red Hat</h1>
-    <ul>
-      <li>Expands OpenShift footprint</li>
-      <li>Enables MSP standardization</li>
-      <li>Accelerates VMware exit campaigns</li>
-      <li>Strengthens sovereign positioning</li>
-    </ul>
-    <div class="highlight">
-      SCO multiplies OpenShift.
-    </div>
-  </section>
+    <h2 style="text-align:center;">
+      SCO multiplies OpenShift footprint.
+    </h2>
 
-  <section style="background: linear-gradient(135deg,#232526,#414345); color:white;">
-    <h1>VMware Exit → OpenShift Virt → SCO</h1>
-    <ul>
-      <li>Runtime = OpenShift Virtualization</li>
-      <li>Operating model = SCO</li>
-      <li>Multi-tenant orchestration built-in</li>
-    </ul>
-    <div class="highlight">
-      Without SCO, customers rebuild control planes manually.
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section style="background: linear-gradient(135deg,#2b5876,#4e4376); color:white;">
-    <h1>Sovereign XaaS on OpenShift</h1>
-    <ul>
-      <li>National CSPs</li>
-      <li>Telcos</li>
-      <li>Government clouds</li>
-      <li>Defense initiatives</li>
-    </ul>
-    <div class="highlight">
-      SCO enables sovereign platforms — not just clusters.
-    </div>
-  </section>
+<!-- Slide 7 -->
+<section class="section-light">
+  <div class="container">
 
-  <section style="background: linear-gradient(135deg,#1d4350,#a43931); color:white;">
-    <h1>Architecture View</h1>
-    <h2>Users → SCO → OpenShift → Infrastructure</h2>
-    <ul>
-      <li>Policy Enforcement</li>
-      <li>FinOps Layer</li>
-      <li>API & Terraform Integration</li>
-      <li>Extension-ready (DBaaS, AIaaS, VPNaaS)</li>
-    </ul>
-  </section>
+    <h1 style="text-align:center;">
+      Category Creation
+    </h1>
 
-  <section style="background: linear-gradient(135deg,#000428,#004e92); color:white;">
-    <h1>Strategic Partnership Opportunity</h1>
-    <ul>
-      <li>Joint MSP positioning</li>
-      <li>VMware exit acceleration</li>
-      <li>Sovereign cloud enablement</li>
-      <li>Reference architectures</li>
-    </ul>
-    <div class="highlight">
-      Together, we define a new OpenShift growth vector.
-    </div>
-  </section>
+    <br/><br/>
 
-  <section style="background: linear-gradient(135deg,#111111,#333333); color:white;" class="center">
-    <h1>SCO Makes OpenShift Sellable as a Cloud</h1>
-    <div class="highlight">
-      OpenShift gives you the technology.<br/>
-      SCO gives you the business model.
-    </div>
-  </section>
+    <h2 style="text-align:center;">
+      CMPs Manage Infrastructure.
+      <br/>
+      <span class="highlight">SCO Engineers Cloud Businesses.</span>
+    </h2>
 
-</SlideLayout>
+    <br/><br/><br/>
+
+    <p style="text-align:center;">
+      We are not building a dashboard.
+      <br/>
+      We are defining a new layer:
+      <br/><br/>
+      <strong>Hyperscaler Engine for Sovereign XaaS Platforms.</strong>
+    </p>
+
+  </div>
+</section>
+
+<!-- Slide 8 -->
+<section>
+  <div class="container">
+
+    <h1 style="text-align:center;">
+      Strategic Opportunity
+    </h1>
+
+    <br/><br/>
+
+    <p style="text-align:center;">
+      Joint VMware exit campaigns.<br/>
+      Joint sovereign positioning.<br/>
+      Reference MSP architectures.<br/>
+      Larger OpenShift deployments.
+    </p>
+
+    <br/><br/><br/>
+
+    <h2 style="text-align:center;" class="highlight">
+      OpenShift gives the technology.
+      <br/>
+      SCO gives the business model.
+    </h2>
+
+  </div>
+</section>
+
+<!-- Final Slide -->
+<section class="cta">
+  <div class="container" style="text-align:center;">
+    <h1>
+      Let’s Define
+      <br/>
+      The Next OpenShift Growth Vector.
+    </h1>
+
+    <br/><br/>
+
+    <h2>
+      From Clusters
+      <br/>
+      To Hyperscaler Platforms.
+    </h2>
+
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const slides = document.getElementById('slides');
+const sections = document.querySelectorAll('section');
+
+let currentIndex = 0;
+
+function goToSlide(index) {
+  currentIndex = Math.max(0, Math.min(index, sections.length - 1));
+  slides.style.transform = `translateY(-${currentIndex * 100}vh)`;
+}
+
+document.addEventListener('keydown', e => {
+  if(e.key === 'ArrowDown' || e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+  if(e.key === 'ArrowUp' || e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+});
+</script>
+
+</body>
+</html>
